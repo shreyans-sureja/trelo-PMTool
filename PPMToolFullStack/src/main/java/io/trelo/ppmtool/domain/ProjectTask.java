@@ -1,6 +1,7 @@
 package io.trelo.ppmtool.domain;
 
 import com.fasterxml.jackson.annotation.JacksonInject;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.omg.DynamicAny.DynArray;
 
@@ -21,6 +22,7 @@ public class ProjectTask {
     private String acceptanceCriteria;
     private String status;
     private Integer priority;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date dueDate;
     private Date created_At;
     private Date updated_At;
